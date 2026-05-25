@@ -1,0 +1,471 @@
+<!--
+=============================================================
+UP&UP 構造化データ（JSON-LD）スニペット集
+=============================================================
+各スニペットを該当ページの <head> 内または </body> 直前に
+コピー＆ペーストしてください。
+
+対象ページ：
+  1. トップページ        https://upandup-hair.com/
+  2. シャンプーページ    https://upandup-hair.com/shampoo-conditioner/
+  3. ローションページ    https://upandup-hair.com/hair-tonic/
+  4. FAQページ（推奨）   https://upandup-hair.com/faq/
+=============================================================
+-->
+
+
+<!-- ============================================================
+  1. トップページ用 (https://upandup-hair.com/)
+     → Organization + WebSite + BreadcrumbList
+============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://upandup-hair.com/#organization",
+      "name": "UP&UP（アップアンドアップ）",
+      "url": "https://upandup-hair.com/",
+      "logo": "https://upandup-hair.com/wp-content/themes/upandup/images/logo.png",
+      "description": "有効成分配合の薬用スカルプケアシリーズ。発売から20年以上、健やかな頭皮と髪のために多くの方に愛され続けています。",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "株式会社RSKサービス",
+        "url": "https://rsk-service.jp/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "丸の内二丁目1番3号",
+          "addressLocality": "岡山市北区",
+          "postalCode": "700-0823",
+          "addressCountry": "JP"
+        },
+        "telephone": "086-235-8181"
+      },
+      "sameAs": [
+        "https://www.instagram.com/rskkenkou/",
+        "https://www.facebook.com/rsk.kenkou"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://upandup-hair.com/#website",
+      "url": "https://upandup-hair.com/",
+      "name": "UP&UP 公式サイト",
+      "publisher": {
+        "@id": "https://upandup-hair.com/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "UP&UP 商品ラインナップ",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "UP&UPスカルプシャンプー",
+          "url": "https://upandup-hair.com/shampoo-conditioner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "UP&UPマイルドコンディショナー",
+          "url": "https://upandup-hair.com/shampoo-conditioner/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "UP&UPヘアレストリングローション",
+          "url": "https://upandup-hair.com/hair-tonic/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ============================================================
+  2. シャンプー＆コンディショナーページ用
+     (https://upandup-hair.com/shampoo-conditioner/)
+     → Product × 2 + BreadcrumbList
+============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "UP&UPスカルプシャンプー",
+      "alternateName": "アップアンドアップ スカルプシャンプー",
+      "description": "ピロクトンオラミン・β-グリチルレチン酸配合の薬用シャンプー。ヤシ油由来・アミノ酸系弱酸性の洗浄成分が毛穴からスッキリ洗い上げ、フケ・かゆみを防いで清潔で健やかな頭皮に整えます。ノンシリコン・フローラル系の香り。",
+      "image": "https://upandup-hair.com/wp-content/themes/upandup/images/shampoo.jpg",
+      "url": "https://upandup-hair.com/shampoo-conditioner/",
+      "brand": {
+        "@type": "Brand",
+        "name": "UP&UP"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "株式会社RSKサービス"
+      },
+      "category": "薬用スカルプシャンプー / 医薬部外品",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "有効成分",
+          "value": "ピロクトンオラミン、β-グリチルレチン酸"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "容量",
+          "value": "400ml"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "医薬部外品",
+          "value": "あり（販売名：アップ アンド アップ スカルプシャンプーRK）"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "無添加",
+          "value": "紫外線吸収剤、合成着色料、ナノマテリアル、石油系界面活性剤、シリコン、酸化防止剤 不使用"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://rsk-kenkou.raku-uru.jp/item-detail/1640427",
+        "price": "3575",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "美と健康専科（RSKサービス）"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "UP&UPマイルドコンディショナー",
+      "alternateName": "アップアンドアップ マイルドコンディショナー",
+      "description": "ピロクトンオラミン・グリチルレチン酸ステアリル配合の薬用コンディショナー。毛髪と頭皮を保湿し、ダメージ補修成分がツヤを与えながらなめらかな指通りに仕上げます。フローラル系の香り。",
+      "image": "https://upandup-hair.com/wp-content/themes/upandup/images/conditioner.jpg",
+      "url": "https://upandup-hair.com/shampoo-conditioner/",
+      "brand": {
+        "@type": "Brand",
+        "name": "UP&UP"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "株式会社RSKサービス"
+      },
+      "category": "薬用コンディショナー / 医薬部外品",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "有効成分",
+          "value": "ピロクトンオラミン、グリチルレチン酸ステアリル"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "容量",
+          "value": "400ml"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "医薬部外品",
+          "value": "あり"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://rsk-kenkou.raku-uru.jp/item-detail/1640694",
+        "price": "3575",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "美と健康専科（RSKサービス）"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "UP&UP トップ",
+          "item": "https://upandup-hair.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "シャンプー＆コンディショナー",
+          "item": "https://upandup-hair.com/shampoo-conditioner/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ============================================================
+  3. ヘアレストリングローションページ用
+     (https://upandup-hair.com/hair-tonic/)
+     → Product × 2（200ml / 500ml）+ BreadcrumbList
+============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "UP&UPヘアレストリングローション 200ml",
+      "alternateName": "アップアンドアップ 育毛剤 200ml",
+      "description": "感光素301号配合の薬用育毛ローション。毛髪サイクルのさまざまなステップに働きかけ、脱毛を予防して発毛を促進します。頭皮に栄養を与え、根元からふんわり健やかな髪へ。",
+      "image": "https://upandup-hair.com/wp-content/themes/upandup/images/lotion-200.jpg",
+      "url": "https://upandup-hair.com/hair-tonic/",
+      "brand": {
+        "@type": "Brand",
+        "name": "UP&UP"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "株式会社RSKサービス"
+      },
+      "category": "薬用育毛剤 / 医薬部外品",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "有効成分",
+          "value": "感光素301号"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "容量",
+          "value": "200ml"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "医薬部外品",
+          "value": "あり（HAIR RESTORING LOTION）"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "効能効果",
+          "value": "発毛促進、脱毛予防、育毛"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://rsk-kenkou.raku-uru.jp/item-detail/1640423",
+        "price": "5280",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "美と健康専科（RSKサービス）"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "UP&UPヘアレストリングローション 500ml",
+      "alternateName": "アップアンドアップ 育毛剤 500ml",
+      "description": "感光素301号配合の薬用育毛ローション大容量サイズ。長期継続使用や多めに使いたい方向けのお得な500ml。成分・効果は200mlと同一。",
+      "url": "https://upandup-hair.com/hair-tonic/",
+      "brand": {
+        "@type": "Brand",
+        "name": "UP&UP"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "株式会社RSKサービス"
+      },
+      "category": "薬用育毛剤 / 医薬部外品",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "有効成分",
+          "value": "感光素301号"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "容量",
+          "value": "500ml"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "医薬部外品",
+          "value": "あり"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://rsk-kenkou.raku-uru.jp/item-detail/1640316",
+        "price": "11000",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "美と健康専科（RSKサービス）"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "UP&UP トップ",
+          "item": "https://upandup-hair.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ヘアレストリングローション",
+          "item": "https://upandup-hair.com/hair-tonic/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- ============================================================
+  4. FAQページ用（新規作成推奨: https://upandup-hair.com/faq/）
+     → FAQPage + BreadcrumbList
+     ※ このスニペットをFAQページに設置すると
+       GoogleのリッチリザルトとAIの引用両方に有効
+============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "name": "UP&UP よくある質問",
+      "url": "https://upandup-hair.com/faq/",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "UP&UPはどのような方に向いていますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "フケ・かゆみ・脂っぽさ・乾燥・抜け毛など頭皮トラブルが気になる方全般に向いています。年齢・性別を問わず使用でき、産後・病後の揺らぎやすい頭皮や成長期の子供にも対応しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "医薬部外品とは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "厚生労働省が有効成分の効能・効果を認可した製品区分です。一般の化粧品と異なり、配合された有効成分が頭皮・毛髪への薬理作用を持つことが認められています。UP&UPの全商品は医薬部外品です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "感光素301号とはどんな成分ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "光に反応して作用する色素（フォトセンシタイザー）の一種で、毛髪サイクルのさまざまなステップに働きかけて発毛を促進し、脱毛を予防する有効成分です。安全性が高く、長年育毛剤に使用されています。UP&UPヘアレストリングローションに配合されています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ピロクトンオラミンとはどんな成分ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "フケ・かゆみの主な原因とされる真菌（マラセチア菌）の増殖を抑える抗真菌性の有効成分です。UP&UPスカルプシャンプーとマイルドコンディショナーの両方に配合されています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "シャンプーと育毛ローションは一緒に使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、セット使いが推奨です。スカルプシャンプーで頭皮を清潔に整えた後、ヘアレストリングローションを頭皮に直接塗布することで、有効成分が浸透しやすくなります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "いつ効果が出ますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "個人差がありますが、継続使用6ヶ月を目安としてください。育毛効果は毛髪サイクル（数ヶ月単位）に沿って徐々に現れます。朝晩毎日の使用を推奨しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ノンシリコンなのにきしまないのはなぜですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ヤシ油由来・アミノ酸系弱酸性の洗浄成分を使用しているため、頭皮と髪への刺激が少なく、すすぎ時のきしみを抑えています。シャンプーはノンシリコンですが、コンディショナーと組み合わせることでなめらかな仕上がりになります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "子供や妊娠中でも使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "スカルプシャンプーは年齢・性別を問わず使用できる設計です。妊娠中・授乳中の方は念のためかかりつけ医にご相談ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一般のシャンプーと何が違いますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般のシャンプーは化粧品（洗浄・保湿のみ）ですが、UP&UPは医薬部外品として有効成分（ピロクトンオラミン・β-グリチルレチン酸）の薬理効果が厚生労働省に認可されています。発売から20年以上の実績があり、処方の信頼性が高い点も特徴です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どこで購入できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "公式オンラインショップ「美と健康専科」（https://rsk-kenkou.raku-uru.jp/）で購入できます。会員登録（無料）で約10%引きの会員価格が適用されます。電話注文は0120-548-343（平日9:00〜17:00）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "送料はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "合計10,800円（税込）以上で送料無料。それ以外は880円（税込）。北海道は1,804円、沖縄は1,364円となります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "会員価格はいくら割引になりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "会員登録（無料）で通常価格の約10%引きになります。スカルプシャンプーは3,575円→3,218円、ヘアレストリングローション200mlは5,280円→4,752円になります。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "UP&UP トップ",
+          "item": "https://upandup-hair.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "よくある質問",
+          "item": "https://upandup-hair.com/faq/"
+        }
+      ]
+    }
+  ]
+}
+</script>
