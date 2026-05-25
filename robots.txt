@@ -26,4 +26,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://rsk-service.jp/sitemap.xml
+Sitemap: https://upandup-llm.pages.dev/sitemap.xml
